@@ -17,7 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WhiskeyActivity">
+        <activity
+            android:name=".WhiskeyActivity"
+            android:theme="@style/WhiskeyTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.alcshop.MainActivity"/>
