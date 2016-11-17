@@ -26,14 +26,16 @@ public class MainActivity extends AppCompatActivity {
         mBeerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i(TAG, "Beer button clicked");
+                Intent intent = new Intent(MainActivity.this, BeerActivity.class);
+                startActivity(intent);
             }
         });
 
         mWhiskeyButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "Whiskey Button Clicked");
+                Intent intent = new Intent(MainActivity.this, WhiskeyActivity.class);
+                startActivity(intent);
             }
         });
     }
