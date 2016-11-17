@@ -12,47 +12,40 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView2" />
+        android:text="AlcShop"
+        android:textSize="34sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:id="@+id/textView" />
 
     <ImageButton
         android:contentDescription="@string/beerButton"
         android:layout_width="125dp"
         android:layout_height="125dp"
         android:id="@+id/beerButton"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:src="@drawable/beer"
         android:clickable="true"
-        android:scaleType="fitXY" />
+        android:scaleType="fitXY"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/textView"
+        android:layout_toLeftOf="@+id/whiskeyButton"
+        android:layout_toStartOf="@+id/whiskeyButton"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp" />
 
     <ImageButton
         android:contentDescription="@string/whiskeyButton"
         android:layout_width="125dp"
         android:layout_height="125dp"
         android:id="@+id/whiskeyButton"
+        android:clickable="true"
+        android:src="@drawable/whiskey"
+        android:scaleType="fitXY"
         android:layout_alignTop="@+id/beerButton"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:clickable="true"
-        android:src="@drawable/whiskey"
-        android:scaleType="fitXY" />
+        android:layout_marginRight="41dp"
+        android:layout_marginEnd="41dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="205dp"
-        android:layout_marginStart="205dp"
-        android:layout_marginTop="46dp" />
 </RelativeLayout>
