@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     @Bind(R.id.beerButton) ImageButton mBeerButton;
     @Bind(R.id.whiskeyButton) ImageButton mWhiskeyButton;
     public static final String TAG = "log";
@@ -23,21 +23,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        mBeerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, BeerActivity.class);
-                startActivity(intent);
-            }
-        });
+        mWhiskeyButton.setOnClickListener(this);
 
-        mWhiskeyButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, WhiskeyActivity.class);
-                startActivity(intent);
-            }
-        });
+        mBeerButton.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v){
+        if(v == mWhiskeyButton){
+            Intent intent = new Intent(MainActivity.this, WhiskeyActivity.class);
+            startActivity(intent);
+        } else if (v == mBeerButton){
+            Intent intent = new Intent(MainActivity.this, BeerActivity.class);
+            startActivity(intent);
+        }
     }
 
 
